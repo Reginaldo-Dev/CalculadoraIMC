@@ -7,12 +7,12 @@ let cxNome = document.querySelector('#nome')
 let cxIdade = document.querySelector('#idade')
 let cxPeso = document.querySelector('#peso')
 let cxAltura = document.querySelector('#altura')
-let cxImc = document.querySelector('#resultadordoImc')
+let cxImc = document.querySelector('#resultadoImc')
 
 let aviso = document.querySelector('#aviso')
 let dados = document.querySelector('.pessoa')
 
-let btnEnviar = document.querySelector('#')
+let btnEnviar = document.querySelector('#btnEnviar')
 let btnLimpar = document.querySelector('#btnLimpar')
 
 /*-- PARA PEGAR OS DADOS QUE ESTÃO DENTRO DAS CAIXAS 
@@ -38,7 +38,7 @@ btnEnviar.addEventListener(' click', function(e){
     console.log(imc)
 
     cxImc.value = imc
-    let sit = situacaoDoPeso
+    let sit = situacaoDoPeso(imc)
     aviso.textContent = sit
 
     // SAIDA DE DADOS
@@ -57,7 +57,7 @@ btnEnviar.addEventListener(' click', function(e){
         nome : nome,
         idade: idade,
         peso : peso,
-        atura: altura,
+        altura: altura,
         imc  : imc,
         sit  : sit,
     }    
